@@ -1,3 +1,7 @@
 .navbar-brand {
     font-family: "Times New Roman"; 
 }
+
+.first-navbar {
+    background-color: darkred;
+}
