@@ -5,3 +5,8 @@
 .first-navbar, .search-button, .icons {
     background-color: darkred;
 }
+
+#calendar {
+    max-width: 1100px;
+    margin: 40px auto;
+}
