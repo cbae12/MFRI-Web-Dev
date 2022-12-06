@@ -12,6 +12,10 @@
     
 }
 
+.justify-content-center {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 #calendar {
     max-width: 1100px;
     margin: 40px auto;
