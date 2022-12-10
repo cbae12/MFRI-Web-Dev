@@ -6,10 +6,10 @@
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light first-navbar">
       <a class="navbar-brand text-white" href="#">UNIVERSITY SYSTEMS OF MARYLAND</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +38,7 @@
         </ul>
       </div>
     </nav>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary p-3">
       <a class="navbar-brand" href="#">
         <img src="Images/USMLogo2.png" width="35" height="35" alt="">
@@ -60,6 +61,7 @@
         </ul>
       </div>
     </nav>
+
     <div class="has-bg-img">
       <div class="bg-image" style="background-image: url('Images/mfri_hq_sunset.original.jpg'); height: auto; width: auto">
         <div class="d-flex justify-content-center">
@@ -78,26 +80,6 @@
         </div>
       </div>
     </div>
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="buttonModal" tabindex="-1" aria-labelledby="btnModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="btnModalLabel">Calendar</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="calendar"></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Container -->
     <div class="container">
       <div class="d-flex  flex-col justify-content-center">
         <h2 class="pt-5">MICRB Site Purpose</h2>
@@ -114,25 +96,48 @@
           <h2 class="pt-5">Upcoming Meetings</h2>
         </div>
         <h5 class="d-flex justify-content-around m-5 pb-5">
-          <button type="button" class="btn-warning btn btn-outline-danger btn-lg" data-toggle="modal" data-target="#buttonModal" data-info="popped">
+          <button type="button" class="btn-light btn btn-outline-dark btn-lg" data-toggle="modal" data-target="#meetingModal" data-info="popped">
             <div class="font-weight-bolder">Next Meeting Information</div>
           </button>
-          <button type="button" class="btn-warning btn btn-outline-danger btn-lg" data-toggle="modal" data-target="#buttonModal" data-info="popped">
+          <button type="button" class="btn-light btn btn-outline-dark btn-lg" data-toggle="modal" data-target="#calendarModal" data-info="popped">
             <div class="font-weight-bolder">Calendar View</div>
           </button>
         </h5>
-
-        <div class="modal fade" id="buttonModal" tabindex="-1" aria-labelledby="btnModalLabel" aria-hidden="true">
+        <!-- Meeting Information Modal -->
+        <div class="modal fade" id="meetingModal" tabindex="-1" aria-labelledby="meetingLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="btnModalLabel">Calendar</h5>
+                <h5 class="modal-title" id="meetingLabel">Next Meeting Information</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <div class="calendar"></div>
+                <a href="#">Info</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Calendar Modal -->
+        <div class="modal fade bd-example-modal-lg" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="calendarLabel">Event Calendar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div id="calendar">
+                    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+                  </div>
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -159,7 +164,7 @@
         </div>
       </div>
     </div>
-    </div>
+
     <div class="container">
       <div class="d-flex flex-col justify-content-center mb-3">
         <h2>Other Links</h2>
@@ -291,16 +296,16 @@
     <div class="has-bg-img">
       <div class="bg-image" style="background-image: url('Images/mfri_footer_background.jpg'); height: 25vh; width: auto">
         <h5 class="d-flex justify-content-sm-center m-5 pb-5">
-            <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">EQUITY</a>
-            <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">ETHICS</a>
-            <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">CONTACT</a>
-            <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">PRIVACY NOTE</a>
-            <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">WEB ACCESSIBILITY</a>          
+          <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">EQUITY</a>
+          <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">ETHICS</a>
+          <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">CONTACT</a>
+          <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">PRIVACY NOTE</a>
+          <a href="#" class="btn btn-lg active text-white" role="button" aria-pressed="true">WEB ACCESSIBILITY</a>          
         </h5>
       </div>
     </div>
-  </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="script.js"></script>
