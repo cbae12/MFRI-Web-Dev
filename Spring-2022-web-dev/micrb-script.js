@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initialView: 'dayGridMonth',
     initialDate: '2022-12-05',
     headerToolbar: {
-      left: 'dayGridMonth,timeGridWeek,timeGridDay,addEventButton',
+      left: 'dayGridMonth,timeGridWeek,timeGridDay',
       center: 'title',
-      right: 'today,prevYear,prev,next,nextYear'
+      right: 'prevYear,prev,next,nextYear'
     },
     footerToolbar: {
-      left: 'custom1,custom2',
+      left: 'today,addEventButton',
       center: '',
       right: 'prev,next'
     },
